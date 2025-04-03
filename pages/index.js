@@ -1,113 +1,52 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Link from "next/link";
 
 export default function Home() {
+  const pages = [
+    { name: "Grid list", path: "hicheel4" },
+    { name: "Search bar", path: "search" },
+    { name: "Weather app", path: "weatherapp" },
+    { name: "Class info", path: "biydaalt" },
+    { name: "Nest high school, counter", path: "2_1" },
+    { name: "Color changer 2", path: "2_2" },
+    { name: "Tooluur", path: "2_5" },
+    { name: "Github free API", path: "2_7" },
+    { name: "Mongol API Final", path: "mongolapi1" },
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      
+
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white px-6 relative overflow-hidden">
+        
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-blue-500 opacity-20 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-cyan-400 opacity-20 rounded-full blur-3xl" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+     
+        <header className="w-full py-12 text-center bg-gray-800 shadow-lg flex justify-center items-center rounded-b-3xl border-b-4 border-cyan-400">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide drop-shadow-xl uppercase bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-blue-500">
+            WELCOME TO MY WEBSITE
+          </h1>
+        </header>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12 w-full max-w-5xl">
+          {pages.map(({ name, path }) => (
+            <div key={path} className="relative group">
+              <Link href={path} legacyBehavior>
+                <a className="block p-8 md:p-12 text-xl md:text-2xl font-semibold bg-gray-900 text-white rounded-2xl shadow-xl border border-gray-600 relative overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-lg backdrop-blur-md bg-opacity-60 hover:bg-opacity-80">
+                  <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
+                  <span className="relative z-10 group-hover:text-gray-200">{name}</span>
+                </a>
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <footer className="mt-14 text-lg md:text-xl font-medium opacity-90 tracking-wide bg-gray-800 py-5 px-10 rounded-full shadow-lg border-2 border-gray-600 hover:bg-gray-700 transition-all duration-300 backdrop-blur-md bg-opacity-50 text-cyan-300">
+          Made by Khangarid J
+        </footer>
+      </div>
+    </>
   );
 }

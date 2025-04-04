@@ -7,7 +7,7 @@ export default function Home() {
     { name: "Weather app", path: "weatherapp" },
     { name: "Class info", path: "biydaalt" },
     { name: "Nest high school, counter", path: "2_1" },
-    { name: "Color changer 2", path: "2_2" },
+
     { name: "Tooluur", path: "2_5" },
     { name: "Github free API", path: "2_7" },
     { name: "Mongol API Final", path: "mongolapi1" },

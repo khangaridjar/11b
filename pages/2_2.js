@@ -1,7 +1,9 @@
 import React, {useEffect, useState } from "react"; 
+import { useRouter } from "next/router";
 
-
-const useStateTask = () => {
+export default function Home() {
+    const router = useRouter();
+    const useStateTask = () => {
     
     const [color, setColor] = useState("");
     useEffect(() => {
@@ -11,6 +13,12 @@ const useStateTask = () => {
     return (
         
         <div className={`flex space-x-4 w-full h-screen p-4 bg-${color}-800`} >
+            <button 
+      onClick={() => router.back()} 
+      className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+    >
+      ← Back
+    </button>
             <div>
 
         
@@ -33,5 +41,4 @@ const useStateTask = () => {
     );
 };
 
-
-export default useStateTask;
+}

@@ -1,10 +1,17 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
     const [count, setClick] = useState(0);  
-
+    const router = useRouter();
     return (
         <div className="h-screen w-full bg-gray-100">
+            <button 
+      onClick={() => router.back()} 
+      className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+    >
+      ← Back
+    </button>
           <div className="h-16 w-full bg-blue-800 mt-16 flex justify-center items-center">
                 <p className="text-white text-xl">
                     Nest High School

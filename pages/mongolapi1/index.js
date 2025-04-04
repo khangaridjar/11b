@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 
 export default function Mongolapi() {
+  const router = useRouter();
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const [isGrid, setIsGrid] = useState(true);
@@ -51,6 +54,12 @@ export default function Mongolapi() {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-indigo-800 via-purple-600 to-blue-500 p-6">
+      <button 
+      onClick={() => router.back()} 
+      className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+    >
+      ← Back
+    </button>
       <h1 className="text-4xl font-extrabold text-center text-white mb-8 drop-shadow-lg">
         Mongol API
       </h1>
